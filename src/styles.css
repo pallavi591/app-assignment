@@ -1,1 +1,98 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin:0;
+    padding:0;
+}
+
+.container{width:100%; }
+.padding40{padding:40px;}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.col{
+    display:flex;flex-direction: column;
+    justify-content: center;
+    align-content: center;
+ 
+}
+.border-grey{ 
+    border-radius:4px;
+    border:1px solid lightgray;
+    padding:20px;
+}
+.detail-box{
+    display:flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    width:200px;
+    /* height:70px; */
+    border: 1px solid lightgrey;
+    border-radius:4px;
+    padding:15px;
+    box-shadow: 0px 0px 5px #c7c7c7;
+  }
+.detail-box p{
+    color:lightgrey;
+    font-size:12px;
+}
+.detail-box h6{
+    color:navy;
+    margin-top:10px;
+ 
+}
+.connector{
+   height:1px;
+   width:100%;
+   align-self: center;position: relative;
+   background-color: lightgreen;
+}
+.arrow{ 
+    height: 15px;
+  width: 15px;
+  border-style: solid;
+  border-color: black;
+  border-width: 0px 1px 1px 0px;
+  display: flex;
+  margin-top: -7px;
+  position: absolute;
+ 
+}
+.right {
+    transform: rotate(-45deg);
+    right: 3px;
+    /* -webkit-transform: rotate(-45deg); */
+}
+.left {
+    transform: rotate(135deg);
+    left:3px;
+    /* -webkit-transform: rotate(180deg); */
+}
+.sec-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.sec-col{
+    margin-left:20px;
+}
+.text-right{
+    align-self: flex-end;
+}
+.container-detail{display:flex;}
+.sec-row{    display: flex;
+    flex-direction: row;margin-bottom: 20px;}
+    .relative{
+        position: relative;
+    }
+    .vertical-line{    position: absolute;
+        height: calc(100% + 25px);
+        width: 2px;
+        background-color: pink;
+        top:0;
+    }
+   .form-group:first-child .vertical-line{
+        height: 100%;
+top:50%;    }

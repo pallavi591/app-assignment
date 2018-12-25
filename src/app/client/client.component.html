@@ -1,0 +1,56 @@
+<div class="container padding40">
+  <div class=" border-grey row h-100 justify-content-center align-items-center">
+    <div class="col-12">
+    <div class="text-right">
+      <a  class="btn btn-link" (click)="open(content)">Edit</a>
+    </div> 
+    <div class="row">
+      <div class="container-detail"  *ngFor="let client of endClient">
+        <div class="detail-box" (click)="data(client)">
+          <p>End Client</p>
+          <h6>{{client.name}}</h6></div>
+          <div class="connector  client ">
+              <div class="arrow left"></div>
+          </div>
+      </div>
+      <div class="container-detail "  *ngFor="let client of client">
+        <div class="detail-box" (click)="data(client)">
+          <p>Client (Tier{{client.id}})</p>
+          <h6>{{client.name}}</h6></div>
+          <div class="connector  client ">
+              <div class="arrow left"></div>
+          </div>
+      </div>
+      <div class="container-detail "  *ngFor="let org of orgs">
+        <div class="detail-box" (click)="data(org)">
+          <p>Your Organization</p>
+          <h6>{{org.name}}</h6></div>
+      </div>
+      <div class="container-detail "  *ngFor="let vendor of vendor">
+          <div class="connector  client ">
+              <div class="arrow right"></div>
+          </div>
+          <div class="detail-box">
+            <p>Vendor (Tier{{vendor.id}})</p>
+            <h6>{{vendor.name}}</h6></div>
+            
+        </div>
+  </div>
+</div>
+</div>
+  </div>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Your link to End-client</h4>
+  </div>
+  <div class="modal-body">
+<app-clientdetail ></app-clientdetail>
+  </div>
+  <div class="modal-footer">
+      <div class="col-4">
+                  <input type="button" class="form-control btn-secondary" (click)="modal.close('cancel')" value="Cancel"/></div>
+            <div class="col-4">
+              <input type="button" class="form-control btn-primary" (click)="modal.close('Update')" value="Update"/></div>
+
+    </div>
+</ng-template>
