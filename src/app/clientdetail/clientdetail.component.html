@@ -37,6 +37,10 @@
                   <label >Client Website</label>
                   <input type="text" class="form-control" [(ngModel)]="client.website"/>
               </div>
+              <div class="sec-col">
+                  <label></label>
+                  <i class="fa fa-minus-circle" (click)="deleteClient(client)"></i>
+              </div>
           </div>
       <!-- </div> -->
   </div>
@@ -73,6 +77,10 @@
             <div class="sec-col">
                   <label >Vendor Website</label>
                   <input type="text" class="form-control" [(ngModel)]="vendor.website"/>
+              </div>
+            <div class="sec-col">
+                  <label></label>
+                  <i class="fa fa-minus-circle" (click)="deleteVendor(vendor)"></i>
               </div>
           </div>
       <!-- </div> -->

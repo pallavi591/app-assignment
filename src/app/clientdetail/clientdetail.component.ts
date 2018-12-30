@@ -22,8 +22,22 @@ export class ClientdetailComponent implements OnInit {
     this.client.push({id: this.client.length+1, name: '', website: ''});
   }
 
+  deleteClient(data):void{
+    const index: number = this.client.indexOf(data);
+    if (index !== -1) {
+        this.client.splice(index, 1);
+    }
+  }
+
   addVendor():void{
     this.vendors.push({id: this.vendors.length+1, name: '', website: ''});
+  }
+
+  deleteVendor(data):void{
+    const index: number = this.vendors.indexOf(data);
+    if (index !== -1) {
+        this.vendors.splice(index, 1);
+    }
   }
 
 }
